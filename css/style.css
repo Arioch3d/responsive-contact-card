@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column; /* Default: Vertical on small screens */
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    overflow: hidden;
+}
+
+.card-image-container {
+    padding: 20px;
+    text-align: center; /* Center image above text in vertical layout */
+}
+
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centers the image if it's a block element */
+}
+
+.card-content {
+    padding: 20px;
+    text-align: justify; /* Justify text information */
+}
+
+.card-content h2 {
+    margin-top: 0;
+    text-align: center; /* Center name and title */
+}
+
+.card-content .title {
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card-content .info, .card-content .bio {
+    margin-bottom: 10px;
+    text-align: justify; /* Justify other info */
+}
+
+/* Media Query for larger screens (horizontal layout) */
+@media (min-width: 600px) {
+    .contact-card {
+        flex-direction: row; /* Horizontal on large screens */
+        max-width: 800px;
+    }
+
+    .card-image-container {
+        flex: 1; /* Takes up available space */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-content {
+        flex: 2; /* Takes up more space than the image container */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-content h2, .card-content .title {
+        text-align: left; /* Align text to the left in horizontal layout */
+    }
+
+    .card-image {
+        width: 120px;
+        height: 120px;
+    }
+}
